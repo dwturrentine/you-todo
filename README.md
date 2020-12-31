@@ -2,7 +2,9 @@
 A simple Todo app built with Create React App.
 
 # Knowledge, Skills, & Abilities
--
+- Comprehension of JSX, React Components, React States, and Hooks.
+- Comprehension of React Props and UUID.
+- Material UI implementation.
 
 ## Getting Started with Create React App
 
