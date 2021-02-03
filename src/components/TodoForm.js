@@ -5,21 +5,25 @@ import {v4 as uuid} from "uuid";
 
 function TodoForm({ addTodo }) {
 
+    // State to keep track of user input
+
     const [todo, setTodo] = useState({
         id:"",
         task:"",
         completed: false
     })
+// Function to handle user input for todo to track in state - responsible for updating task property on todo object
 
 function handleTaskInputChange(e) {
     setTodo({ ...todo, task: e.target.value });
 }
+// User submits form, form's todo added from state to list of todos - also takes in event from DOM
 
 function handleSubmit(e) {
     e.preventDefault();
     if (todo.task.trim()) {
         addTodo({ ...todo, id: uuid() });
-        // Reset Task Input
+        // Reset task input
         setTodo({ ...todo, task: ""});
 
     }

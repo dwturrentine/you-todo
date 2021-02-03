@@ -7,7 +7,9 @@ import Typography from "@material-ui/core/Typography";
 const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]); // Extract two elements from array
+  
+  // Stores todos in browser
 
   useEffect(() => {
     const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -20,6 +22,8 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
 
   }, [todos])
+  
+  // Takes in todo, adds to array of todo
 
   function addTodo(todo) {
     setTodos([todo, ...todos]);
